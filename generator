@@ -1,0 +1,21 @@
+import enchant
+import random 
+import string
+
+
+choice = string.ascii_letters
+choice += " "
+str = ""
+dictionary = enchant.Dict("en_US")
+
+while True:
+    a = random.choice(choice)
+    str += a
+    if (a == " "):
+        if (dictionary.check(str)):
+            print(str)
+        else:
+            str = ""
+  
+  
+  #doenst work yet
